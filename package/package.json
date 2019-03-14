@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-express-app",
+  "private": true,  
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "keywords": [],
+  "author": "Nick Santos",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

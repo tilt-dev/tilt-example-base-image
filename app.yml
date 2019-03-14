@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-express-app
+spec:
+  selector:
+    matchLabels:
+      app: nodejs-express-app
+  template:
+    metadata:
+      labels:
+        app: nodejs-express-app
+    spec:
+      containers:
+      - name: nodejs-express-app
+        image: tilt.dev/nodejs-express-app
+        ports:
+        - containerPort: 3000

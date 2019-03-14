@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-express-k8s
+spec:
+  selector:
+    matchLabels:
+      app: nodejs-express-k8s
+  template:
+    metadata:
+      labels:
+        app: nodejs-express-k8s
+    spec:
+      containers:
+      - name: nodejs-express-k8s
+        image: gcr.io/windmill-public-containers/nodejs-express-k8s
+        ports:
+        - containerPort: 3000
