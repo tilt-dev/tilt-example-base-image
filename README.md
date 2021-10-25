@@ -1,6 +1,24 @@
-# Example NodeJS on Local K8s app
+# tilt-example-base-image
 
-Requirements: [Tilt](https://tilt.dev/)
+[![Build Status](https://circleci.com/gh/tilt-dev/tilt-example-nodejs/tree/master.svg?style=shield)](https://circleci.com/gh/tilt-dev/tilt-example-nodejs)
+
+
+## Why
+
+In microservice apps, you often have a base image
+that defines a shared set of language toolchains or dependencies.
+Then individual apps share the base image.
+
+This repo shows a [Tiltfile](Tiltfile) that builds
+a base image, then an app image, then deploys the app.
+When you make changes to the files, Tilt will live-update
+the app with your changes.
+
+For a detailed explanation of this code, see the tutorial:
+
+https://docs.tilt.dev/dependent_images.html
+
+## How
 
 With a local Kubernetes environment, run:
 
@@ -8,14 +26,14 @@ With a local Kubernetes environment, run:
 tilt up
 ```
 
-If you get errors trying to push to gcr.io/windmill-public-containers, that means
-you're not using a local Kubernetes environment (like Docker For Mac or Minikube).
-See [the FAQ](https://docs.tilt.dev/faq.html#q-how-do-i-change-what-kubernetes-cluster-tilt-uses) for more info.
-
-# Endpoints
-
-## Hello World
+The view the app:
 
 ```sh
 curl http://localhost:3000
 ```
+
+## License
+
+Copyright 2020 tilt.dev
+
+Licensed under [the Apache License, Version 2.0](LICENSE)

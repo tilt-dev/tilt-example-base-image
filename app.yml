@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: nodejs-express-app
-        image: tilt.dev/nodejs-express-app
+        image: nodejs-express-app-image
         ports:
         - containerPort: 3000
