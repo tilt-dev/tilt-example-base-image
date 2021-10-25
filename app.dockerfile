@@ -1,4 +1,4 @@
-FROM tilt.dev/nodejs-express-base
+FROM nodejs-express-base-image
 
 WORKDIR '/var/www/app'
 
