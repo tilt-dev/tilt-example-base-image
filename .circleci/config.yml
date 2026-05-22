@@ -6,6 +6,5 @@ jobs:
 
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 19.03.12
+      - setup_remote_docker
       - run: ctlptl create cluster kind --registry=ctlptl-registry && tilt ci
